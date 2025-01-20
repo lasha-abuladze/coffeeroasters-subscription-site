@@ -1,0 +1,131 @@
+
+* {
+    transition: all 0.2s;
+}
+
+$frances--font: "Fraunces", serif;
+
+body {
+    background-color: #F2F2F2;
+    font-family: $frances--font;
+}
+
+
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    background: none;
+    border: none;
+}
+
+.display-none {
+    display: none
+}
+
+.main-section {
+
+    .main--header {
+        @include flex-row();
+        padding: 32px 25px;
+        box-sizing: border-box;
+
+        .logo-div {
+            @include flex-row();
+            gap: 5px;
+            // font-family: $frances--font;
+            font-size: 20px;
+            font-weight: 700;
+            color: #333D4B;
+        }
+
+        .main--navigation {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 90px);
+            height: 90px;
+            top: 90px;
+            left: 0;
+            text-align: center;
+            padding-top: 50px;
+            box-sizing: border-box;
+            font-size: 32px;
+            font-weight: 700;
+
+            ul {
+                @include flex-column();
+                align-items: start;
+                gap: 45px;
+                position: relative;
+
+                li {                
+                    width: fit-content;
+                    // transform: translateX(100%);
+
+                    a {
+                        color: #333D4B;
+                    }
+    
+                }
+
+                .li--home {
+                    transform: translateX(-100%);
+                }
+
+                .li--about {
+                    align-self: flex-end;
+                    transform: translateX(100%);
+                }
+
+                .li--create {
+                    transform: translateX(-100%);
+                }
+            }
+
+
+            
+
+            background: linear-gradient( #F2F2F2, 
+            rgba(242, 242, 242, 0.5), 
+            rgba(242, 242, 242, 0.3), 
+            rgba(242, 242, 242, 0.1), 
+            rgba(242, 242, 242, 0));
+
+            // display: none;
+        }
+
+        // .close-open-buttons--div {
+      
+        //     button {
+        //         // // max-width: fit-content;
+        //         // background-color: #b2bcc6;
+        //         // height: fit-content;
+        //     }
+
+        // }
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
