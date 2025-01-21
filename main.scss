@@ -6,8 +6,10 @@
 $frances--font: "Fraunces", serif;
 
 body {
-    background-color: #F2F2F2;
+    // background-color: #F2F2F2;
     font-family: $frances--font;
+
+    background-color: #9b7575;
 }
 
 
@@ -54,7 +56,7 @@ body {
         .main--navigation {
             position: absolute;
             width: 100%;
-            height: calc(100vh - 90px);
+            height: calc(100vh - 90px) !important;
             height: 90px;
             top: 90px;
             left: 0;
@@ -63,7 +65,9 @@ body {
             box-sizing: border-box;
             font-size: 32px;
             font-weight: 700;
-
+            white-space: nowrap;
+            overflow: hidden;
+            
             
             background: linear-gradient( #F2F2F2, 
             rgba(242, 242, 242, 0.5), 
@@ -71,15 +75,47 @@ body {
             rgba(242, 242, 242, 0.1), 
             rgba(242, 242, 242, 0));
 
+            display: none;
+
+
+            .navigation--open {
+                animation-name: navigation-open;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes navigation-open {
+                0%{
+                    display: block !important;
+                    background: linear-gradient( #F2F2F2, 
+                    rgba(242, 242, 242, 0), 
+                    rgba(242, 242, 242, 0), 
+                    rgba(242, 242, 242, 0), 
+                    rgba(242, 242, 242, 0));
+                    
+                } 100% {
+                    display: block !important;
+                    background: linear-gradient( #F2F2F2, 
+                    rgba(242, 242, 242, 0.5), 
+                    rgba(242, 242, 242, 0.3), 
+                    rgba(242, 242, 242, 0.1), 
+                    rgba(242, 242, 242, 0));
+                }
+            }
+
+
+
             ul {
                 @include flex-column();
                 align-items: start;
                 gap: 45px;
                 position: relative;
 
+                background-color: gray;
+
                 li {                
                     width: fit-content;
-                    // transform: translateX(100%);
+                    position: absolute;
 
                     a {
                         color: #333D4B;
@@ -88,32 +124,134 @@ body {
                 }
 
                 .li--home {
+                    top: 0;
+                    left: 0;
                     transform: translateX(-100%);
+
                 }
 
                 .li--about {
-                    align-self: flex-end;
+                    top: 60px;
+                    right: 0;
                     transform: translateX(100%);
                 }
 
                 .li--create {
+                    top: 120px;
+                    left: 0;
                     transform: translateX(-100%);
                 }
+
+                
+                .li-home--open {
+                    animation-name: liHome-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .li-about--open {
+                    animation-name: liAbout-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .li-create--open {
+                    animation-name: liCreatet-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+
+
+                @keyframes liHome-open {
+                    0%{
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+
+                    100% {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                @keyframes liAbout-open {
+                    0% {
+                        right: 0;
+                        transform: translateX(100%);
+                    } 100% {
+                        right: 50%;
+                        transform: translateX(50%);
+                    }
+                }
+
+                @keyframes liCreatet-open {
+                    0%{
+                        left: 0;
+                        transform: translateX(-100%);
+                    } 100% {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+
+
+                .li-home--close {
+                    animation-name: liHome-close;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+                
+                .li-about--close {
+                    animation-name: liAbout-close;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .li-create--close {
+                    animation-name: liCreate-close;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+
+                @keyframes liHome-close {
+                    0%{
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    100% {
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+                }
+
+                @keyframes liAbout-close {
+                    0% {
+                        right: 50%;
+                        transform: translateX(50%);
+                    } 100% {
+                        right: 0;
+                        transform: translateX(100%);
+                    }
+                }
+
+                @keyframes liCreate-close {
+                    0%{
+                        left: 50%;
+                        transform: translateX(-50%);
+                    } 100% {
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+                }
+
             }
 
 
-            // display: none;
         }
-
-        // .close-open-buttons--div {
-      
-        //     button {
-        //         // // max-width: fit-content;
-        //         // background-color: #b2bcc6;
-        //         // height: fit-content;
-        //     }
-
-        // }
 
         .close-open--btns {
             width: 20px;

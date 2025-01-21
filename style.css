@@ -2,8 +2,8 @@
   transition: all 0.2s; }
 
 body {
-  background-color: #F2F2F2;
-  font-family: "Fraunces", serif; }
+  font-family: "Fraunces", serif;
+  background-color: #9b7575; }
 
 .btn {
   background: none;
@@ -31,7 +31,7 @@ body {
   .main-section .main--header .main--navigation {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 90px) !important;
     height: 90px;
     top: 90px;
     left: 0;
@@ -40,7 +40,22 @@ body {
     box-sizing: border-box;
     font-size: 32px;
     font-weight: 700;
-    background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.3), rgba(242, 242, 242, 0.1), rgba(242, 242, 242, 0)); }
+    white-space: nowrap;
+    overflow: hidden;
+    background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.3), rgba(242, 242, 242, 0.1), rgba(242, 242, 242, 0));
+    display: none; }
+    .main-section .main--header .main--navigation .navigation--open {
+      animation-name: navigation-open;
+      animation-duration: 1s;
+      animation-fill-mode: forwards; }
+
+@keyframes navigation-open {
+  0% {
+    display: block !important;
+    background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0)); }
+  100% {
+    display: block !important;
+    background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.3), rgba(242, 242, 242, 0.1), rgba(242, 242, 242, 0)); } }
     .main-section .main--header .main--navigation ul {
       display: flex;
       flex-direction: column;
@@ -48,18 +63,97 @@ body {
       justify-content: space-between;
       align-items: start;
       gap: 45px;
-      position: relative; }
+      position: relative;
+      background-color: gray; }
       .main-section .main--header .main--navigation ul li {
-        width: fit-content; }
+        width: fit-content;
+        position: absolute; }
         .main-section .main--header .main--navigation ul li a {
           color: #333D4B; }
       .main-section .main--header .main--navigation ul .li--home {
+        top: 0;
+        left: 0;
         transform: translateX(-100%); }
       .main-section .main--header .main--navigation ul .li--about {
-        align-self: flex-end;
+        top: 60px;
+        right: 0;
         transform: translateX(100%); }
       .main-section .main--header .main--navigation ul .li--create {
+        top: 120px;
+        left: 0;
         transform: translateX(-100%); }
+      .main-section .main--header .main--navigation ul .li-home--open {
+        animation-name: liHome-open;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .main--navigation ul .li-about--open {
+        animation-name: liAbout-open;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .main--navigation ul .li-create--open {
+        animation-name: liCreatet-open;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+
+@keyframes liHome-open {
+  0% {
+    left: 0;
+    transform: translateX(-100%); }
+  100% {
+    left: 50%;
+    transform: translateX(-50%); } }
+
+@keyframes liAbout-open {
+  0% {
+    right: 0;
+    transform: translateX(100%); }
+  100% {
+    right: 50%;
+    transform: translateX(50%); } }
+
+@keyframes liCreatet-open {
+  0% {
+    left: 0;
+    transform: translateX(-100%); }
+  100% {
+    left: 50%;
+    transform: translateX(-50%); } }
+      .main-section .main--header .main--navigation ul .li-home--close {
+        animation-name: liHome-close;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .main--navigation ul .li-about--close {
+        animation-name: liAbout-close;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .main--navigation ul .li-create--close {
+        animation-name: liCreate-close;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+
+@keyframes liHome-close {
+  0% {
+    left: 50%;
+    transform: translateX(-50%); }
+  100% {
+    left: 0;
+    transform: translateX(-100%); } }
+
+@keyframes liAbout-close {
+  0% {
+    right: 50%;
+    transform: translateX(50%); }
+  100% {
+    right: 0;
+    transform: translateX(100%); } }
+
+@keyframes liCreate-close {
+  0% {
+    left: 50%;
+    transform: translateX(-50%); }
+  100% {
+    left: 0;
+    transform: translateX(-100%); } }
   .main-section .main--header .close-open--btns {
     width: 20px;
     height: 20px;
