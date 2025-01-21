@@ -4,7 +4,7 @@
 body {
   background-color: #F2F2F2;
   font-family: "Fraunces", serif;
-  padding-bottom: 300px; }
+  padding-bottom: 70px; }
 
 .main-section {
   padding: 0px 25px;
@@ -390,3 +390,39 @@ body {
     .section--howitworks hgroup p {
       font-size: 15px;
       line-height: 25px; }
+
+footer {
+  width: calc(100% - 50px);
+  background-color: #2C343E;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 0px;
+  box-sizing: border-box; }
+  footer .logo-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 7px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FEFCF7;
+    margin-bottom: 30px; }
+  footer ul li {
+    margin-bottom: 20px; }
+    footer ul li:last-child {
+      margin-bottom: 0px; }
+    footer ul li a {
+      color: #83888F;
+      font-size: 12px;
+      font-weight: bold; }
+  footer .social-medias {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 15px; }
