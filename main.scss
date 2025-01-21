@@ -597,4 +597,47 @@ body {
 }
 
 
+.section--howitworks {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    text-align: center;
+    padding: 0px 25px;
+    box-sizing: border-box;
 
+    div {
+        margin-bottom: 70px;
+        &:last-child{
+            margin-bottom: 0px;
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 65px;
+    }
+
+    strong {
+        font-size: 72px;
+        font-weight: 700;
+        color: #FDD6BA;
+        margin-bottom: 28px;
+        display: block;
+    }
+
+    hgroup {
+
+        color: #333D4B;
+
+        h3 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}
