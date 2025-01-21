@@ -6,12 +6,9 @@
 $frances--font: "Fraunces", serif;
 
 body {
-    // background-color: #F2F2F2;
+    background-color: #F2F2F2;
     font-family: $frances--font;
-
-    background-color: #9b7575;
 }
-
 
 
 @mixin flex-row {
@@ -39,9 +36,12 @@ body {
 
 .main-section {
 
+    padding: 0px 25px;
+    box-sizing: border-box;
+
     .main--header {
         @include flex-row();
-        padding: 32px 25px;
+        padding: 32px 0px;
         box-sizing: border-box;
 
         .logo-div {
@@ -58,22 +58,21 @@ body {
             width: 100%;
             height: calc(100vh - 90px) !important;
             height: 90px;
-            top: 90px;
+            top: 89px;
             left: 0;
             text-align: center;
             padding-top: 50px;
             box-sizing: border-box;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
             white-space: nowrap;
             overflow: hidden;
             
-            
             background: linear-gradient( #F2F2F2, 
-            rgba(242, 242, 242, 0.5), 
-            rgba(242, 242, 242, 0.3), 
-            rgba(242, 242, 242, 0.1), 
-            rgba(242, 242, 242, 0));
+            rgba(242, 242, 242, 1), 
+            rgba(242, 242, 242, 0.9),
+            rgba(242, 242, 242, 0.7),
+            rgba(242, 242, 242, 0.5));
 
             display: none;
 
@@ -433,9 +432,45 @@ body {
 
 
         }
+    }
+
+    .main--hgroup {
+        text-align: center;
+        padding: 100px 25px;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        background-image: url(./assets/home/mobile/image-hero-coffeepress.jpg);
+        background-size: cover;
+        color: #FEFCF7;
 
 
+        h1 {
+           font-size: 40px;
+           font-weight: 700;
+           margin-bottom: 27px;
+        }
 
+        p {
+            font-size: 15px;
+            line-height: 25px;
+            color: rgba(254, 252, 247, 0.6);
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            width: 217px;
+            height: 56px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+
+            font-size: 18px;
+            font-weight: 700;
+            background-color: #0E8784;
+            color: #FEFCF7;
+            font-family: $frances--font;
+        }
 
     }
 
