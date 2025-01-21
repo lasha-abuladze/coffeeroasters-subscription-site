@@ -472,11 +472,10 @@ body {
 
 
 
-
-
 .section--collection {
     text-align: center;
     margin-top: 120px;
+    margin-bottom: 120px;
 
 
     h2 {
@@ -486,38 +485,116 @@ body {
         color: #333D4B;
     }
 
-    img {
-        width: 200px;
-        margin-bottom: 30px;
-    }
+    figure {
+        margin-bottom: 85px;
 
-    hgroup {
-
-        padding: 0px 25px;
-        box-sizing: border-box;
-        text-align: center;
-        margin-bottom: 90px;
-
-        h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #333D4B;
-            margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
         }
 
-        p {
-            font-size: 15px;
-            font-weight: 400;
-            color: #333D4B;
-            letter-spacing: 1px;
-            line-height: 25px;
+        img {
+            width: 200px;
+            margin-bottom: 30px;
+        }
+    
+        figcaption {
+    
+            padding: 0px 25px;
+            box-sizing: border-box;
+            text-align: center;
+            // margin-bottom: 90px;
+    
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #333D4B;
+                margin-bottom: 15px;
+            }
+    
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                color: #333D4B;
+                letter-spacing: 1px;
+                line-height: 25px;
+            }
         }
     }
+
 
 }
 
 
 
+.section--whyus {
+    padding: 0px 25px;
+    padding-top: 330px;
+    text-align: center;
+    position: relative;
+
+    .why-choose-us {
+        background-color: #2C343E;
+        padding: 60px 25px;
+        box-sizing: border-box;
+        color: #FEFCF7;
+        border-radius: 10px;
+
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0px;
+
+
+        width: calc(100% - 50px);
+        height: 945px;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 25px;
+            color: rgba(254, 252, 247, 0.6);
+        }
+    }
+
+
+    figure {
+        background-color: #0E8784;
+        width: calc(100% - 50px);
+        margin: auto;
+        border-radius: 10px;
+        padding: 68px 25px;
+        box-sizing: border-box;
+        color: #FEFCF7;
+
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+    }
+
+
+
+}
 
 
 
