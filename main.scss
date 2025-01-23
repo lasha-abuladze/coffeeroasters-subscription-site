@@ -442,6 +442,10 @@ body {
            font-size: 40px;
            font-weight: 700;
            margin-bottom: 27px;
+                          
+           span {
+            display: block;
+           }
         }
 
         p {
@@ -604,7 +608,11 @@ body {
     padding: 0px 25px;
     box-sizing: border-box;
 
-    div {
+    .steps-cirles {
+        display: none;
+    }
+
+    .steps {
         margin-bottom: 70px;
         &:last-child{
             margin-bottom: 0px;
@@ -685,4 +693,226 @@ footer {
         justify-content: center;
         gap: 15px;
     }
+}
+
+
+@media (min-width:760px) {
+
+    .main-section {
+
+        padding: 0px 40px;
+        box-sizing: border-box;
+    
+        .main--header {
+   
+            .main--navigation {
+                position: static;
+                background: none;
+                height: 100% !important;
+                padding: 0 !important; 
+                font-size: 12px;    
+                display: block;
+    
+    
+                .navigation--open {
+                    animation-name: navigation-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+    
+                @keyframes navigation-open {
+                    0%{
+                        display: block !important;
+                        background: linear-gradient( #F2F2F2, 
+                        rgba(242, 242, 242, 0), 
+                        rgba(242, 242, 242, 0), 
+                        rgba(242, 242, 242, 0), 
+                        rgba(242, 242, 242, 0));
+                        
+                    } 100% {
+                        display: block !important;
+                        background: linear-gradient( #F2F2F2, 
+                        rgba(242, 242, 242, 0.5), 
+                        rgba(242, 242, 242, 0.3), 
+                        rgba(242, 242, 242, 0.1), 
+                        rgba(242, 242, 242, 0));
+                    }
+                }
+    
+    
+    
+                ul {
+                    @include flex-row();
+                    justify-content: right;
+                    align-items: start;
+                    position: static;
+                    background: none;
+    
+                    li {                
+                        position: static;
+                        transform: translate(0) !important;
+    
+                        // a {
+                        //     color: #333D4B;
+                        // }
+        
+                    }
+    
+                }
+    
+    
+            }
+    
+            .close-open--btns {
+                display: none;        
+            }
+        }
+    
+        .main--hgroup {
+            text-align: left;
+            padding: 100px 25px;   
+            background-image: url(./assets/home/tablet//image-hero-coffeepress.jpg);
+
+            p {
+                width: 420px;
+            }    
+        }    
+    
+    }
+
+    .section--collection {    
+    
+        h2 {
+            font-size: 120px;
+        }
+    
+        figure {
+            @include flex-row();
+            justify-content: center;
+            align-items: start;
+    
+            img {
+                width: 280px;
+                margin-bottom: 30px;
+            }
+        
+            figcaption {
+                max-width: 350px;
+                text-align: left;
+            }
+        }
+    
+    
+    }
+
+    .section--whyus {
+        padding: 0px 40px;
+        padding-top: 250px;
+    
+        .why-choose-us {    
+            width: calc(100% - 80px);
+            height: 560px;
+    
+            h2 {
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 25px;
+            }
+    
+            p {
+                font-size: 15px;
+                line-height: 25px;
+                color: rgba(254, 252, 247, 0.6);
+            }
+        }
+    
+    
+        figure {
+            padding: 45px 90px;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            text-align: left;
+    
+            img {
+                width: 56px;
+                height: 56px;
+            }
+    
+            h3 {
+                margin-top: 0px;
+            }
+        
+        }
+    
+    
+    
+    }
+
+    .section--howitworks {
+        text-align: left;
+        padding: 0px 40px;
+
+
+
+        .steps-cirles {
+
+            display: flex;
+            align-items: center !important;
+            margin-bottom: 48px;
+
+            .circle {
+                width: 31px;
+                height: 31px;
+                border-radius: 50%;
+                border: 2px solid #0E8784;
+            }
+            .steps--line {
+                width: 200px;
+                height: 2px;
+                background-color: #FDD6BA;
+            }
+        }
+
+
+        .steps-div {
+            display: flex;
+            gap: 80px;
+        }
+    
+        .steps {
+            margin-bottom: 70px;
+            
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    
+    }
+
+    footer {
+        width: calc(100% - 80px);
+        padding: 50px 0px;
+
+        ul{
+
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 80px;
+
+            li {
+                margin: 0;
+            }
+        }
+    
+    }
+
+
+
+
 }

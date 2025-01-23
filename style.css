@@ -266,6 +266,8 @@ body {
       font-size: 40px;
       font-weight: 700;
       margin-bottom: 27px; }
+      .main-section .main--hgroup h1 span {
+        display: block; }
     .main-section .main--hgroup p {
       font-size: 15px;
       line-height: 25px;
@@ -367,9 +369,11 @@ body {
   text-align: center;
   padding: 0px 25px;
   box-sizing: border-box; }
-  .section--howitworks div {
+  .section--howitworks .steps-cirles {
+    display: none; }
+  .section--howitworks .steps {
     margin-bottom: 70px; }
-    .section--howitworks div:last-child {
+    .section--howitworks .steps:last-child {
       margin-bottom: 0px; }
   .section--howitworks h2 {
     font-size: 30px;
@@ -426,3 +430,123 @@ footer {
     justify-content: space-between;
     justify-content: center;
     gap: 15px; }
+
+@media (min-width: 760px) {
+  .main-section {
+    padding: 0px 40px;
+    box-sizing: border-box; }
+    .main-section .main--header .main--navigation {
+      position: static;
+      background: none;
+      height: 100% !important;
+      padding: 0 !important;
+      font-size: 12px;
+      display: block; }
+      .main-section .main--header .main--navigation .navigation--open {
+        animation-name: navigation-open;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+  @keyframes navigation-open {
+    0% {
+      display: block !important;
+      background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0)); }
+    100% {
+      display: block !important;
+      background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.3), rgba(242, 242, 242, 0.1), rgba(242, 242, 242, 0)); } }
+      .main-section .main--header .main--navigation ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: right;
+        align-items: start;
+        position: static;
+        background: none; }
+        .main-section .main--header .main--navigation ul li {
+          position: static;
+          transform: translate(0) !important; }
+    .main-section .main--header .close-open--btns {
+      display: none; }
+    .main-section .main--hgroup {
+      text-align: left;
+      padding: 100px 25px;
+      background-image: url(./assets/home/tablet//image-hero-coffeepress.jpg); }
+      .main-section .main--hgroup p {
+        width: 420px; }
+  .section--collection h2 {
+    font-size: 120px; }
+  .section--collection figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: start; }
+    .section--collection figure img {
+      width: 280px;
+      margin-bottom: 30px; }
+    .section--collection figure figcaption {
+      max-width: 350px;
+      text-align: left; }
+  .section--whyus {
+    padding: 0px 40px;
+    padding-top: 250px; }
+    .section--whyus .why-choose-us {
+      width: calc(100% - 80px);
+      height: 560px; }
+      .section--whyus .why-choose-us h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 25px; }
+      .section--whyus .why-choose-us p {
+        font-size: 15px;
+        line-height: 25px;
+        color: rgba(254, 252, 247, 0.6); }
+    .section--whyus figure {
+      padding: 45px 90px;
+      box-sizing: border-box;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      text-align: left; }
+      .section--whyus figure img {
+        width: 56px;
+        height: 56px; }
+      .section--whyus figure h3 {
+        margin-top: 0px; }
+  .section--howitworks {
+    text-align: left;
+    padding: 0px 40px; }
+    .section--howitworks .steps-cirles {
+      display: flex;
+      align-items: center !important;
+      margin-bottom: 48px; }
+      .section--howitworks .steps-cirles .circle {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        border: 2px solid #0E8784; }
+      .section--howitworks .steps-cirles .steps--line {
+        width: 200px;
+        height: 2px;
+        background-color: #FDD6BA; }
+    .section--howitworks .steps-div {
+      display: flex;
+      gap: 80px; }
+    .section--howitworks .steps {
+      margin-bottom: 70px; }
+      .section--howitworks .steps:last-child {
+        margin-bottom: 0px; }
+  footer {
+    width: calc(100% - 80px);
+    padding: 50px 0px; }
+    footer ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 80px; }
+      footer ul li {
+        margin: 0; } }
