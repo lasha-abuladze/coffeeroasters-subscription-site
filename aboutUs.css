@@ -1,0 +1,299 @@
+* {
+  transition: all 0.2s; }
+
+body {
+  background-color: #F2F2F2;
+  font-family: "Fraunces", serif;
+  padding-bottom: 70px; }
+
+.main-section {
+  padding: 0px 25px;
+  box-sizing: border-box; }
+  .main-section .main--header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0px;
+    box-sizing: border-box; }
+    .main-section .main--header .logo-div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #333D4B; }
+    .main-section .main--header .main--navigation {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 90px) !important;
+      height: 90px;
+      top: 89px;
+      left: 0;
+      text-align: center;
+      padding-top: 50px;
+      box-sizing: border-box;
+      font-size: 24px;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      background: linear-gradient(#F2F2F2, #f2f2f2, rgba(242, 242, 242, 0.9), rgba(242, 242, 242, 0.7), rgba(242, 242, 242, 0.5));
+      display: none; }
+      .main-section .main--header .main--navigation .navigation--open {
+        animation-name: navigation-open;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+
+@keyframes navigation-open {
+  0% {
+    display: block !important;
+    background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0)); }
+  100% {
+    display: block !important;
+    background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.3), rgba(242, 242, 242, 0.1), rgba(242, 242, 242, 0)); } }
+      .main-section .main--header .main--navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        align-items: start;
+        gap: 45px;
+        position: relative;
+        background-color: gray; }
+        .main-section .main--header .main--navigation ul li {
+          width: fit-content;
+          position: absolute; }
+          .main-section .main--header .main--navigation ul li a {
+            color: #333D4B; }
+        .main-section .main--header .main--navigation ul .li--home {
+          top: 0;
+          left: 0;
+          transform: translateX(-100%); }
+        .main-section .main--header .main--navigation ul .li--about {
+          top: 60px;
+          right: 0;
+          transform: translateX(100%); }
+        .main-section .main--header .main--navigation ul .li--create {
+          top: 120px;
+          left: 0;
+          transform: translateX(-100%); }
+        .main-section .main--header .main--navigation ul .li-home--open {
+          animation-name: liHome-open;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; }
+        .main-section .main--header .main--navigation ul .li-about--open {
+          animation-name: liAbout-open;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; }
+        .main-section .main--header .main--navigation ul .li-create--open {
+          animation-name: liCreatet-open;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; }
+
+@keyframes liHome-open {
+  0% {
+    left: 0;
+    transform: translateX(-100%); }
+  100% {
+    left: 50%;
+    transform: translateX(-50%); } }
+
+@keyframes liAbout-open {
+  0% {
+    right: 0;
+    transform: translateX(100%); }
+  100% {
+    right: 50%;
+    transform: translateX(50%); } }
+
+@keyframes liCreatet-open {
+  0% {
+    left: 0;
+    transform: translateX(-100%); }
+  100% {
+    left: 50%;
+    transform: translateX(-50%); } }
+        .main-section .main--header .main--navigation ul .li-home--close {
+          animation-name: liHome-close;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; }
+        .main-section .main--header .main--navigation ul .li-about--close {
+          animation-name: liAbout-close;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; }
+        .main-section .main--header .main--navigation ul .li-create--close {
+          animation-name: liCreate-close;
+          animation-duration: 1s;
+          animation-fill-mode: forwards; }
+
+@keyframes liHome-close {
+  0% {
+    left: 50%;
+    transform: translateX(-50%); }
+  100% {
+    left: 0;
+    transform: translateX(-100%); } }
+
+@keyframes liAbout-close {
+  0% {
+    right: 50%;
+    transform: translateX(50%); }
+  100% {
+    right: 0;
+    transform: translateX(100%); } }
+
+@keyframes liCreate-close {
+  0% {
+    left: 50%;
+    transform: translateX(-50%); }
+  100% {
+    left: 0;
+    transform: translateX(-100%); } }
+    .main-section .main--header .close-open--btns {
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer; }
+      .main-section .main--header .close-open--btns .menu-lines {
+        width: 100%;
+        height: 3px;
+        border-radius: 15px;
+        background-color: black;
+        position: absolute; }
+      .main-section .main--header .close-open--btns .line--1 {
+        top: 5%; }
+      .main-section .main--header .close-open--btns .line--2 {
+        top: 50%;
+        transform: translateY(-50%); }
+      .main-section .main--header .close-open--btns .line--3 {
+        bottom: 5%; }
+      .main-section .main--header .close-open--btns .line--1__close {
+        animation-name: lineClose-1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .close-open--btns .line--2__close {
+        animation-name: lineClose-2;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .close-open--btns .line--3__close {
+        animation-name: lineClose-3;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+
+@keyframes lineClose-1 {
+  0% {
+    top: 5%; }
+  50% {
+    top: 50%;
+    transform: translateY(-50%); }
+  100% {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); } }
+
+@keyframes lineClose-2 {
+  0% {
+    display: block; }
+  50% {
+    display: none; }
+  100% {
+    display: none; } }
+
+@keyframes lineClose-3 {
+  0% {
+    bottom: 5%; }
+  50% {
+    bottom: 50%;
+    transform: translateY(50%); }
+  100% {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg); } }
+      .main-section .main--header .close-open--btns .line--1__burger {
+        animation-name: lineBurger-1;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .close-open--btns .line--2__burger {
+        animation-name: lineBurger-2;
+        animation-duration: 2s;
+        animation-fill-mode: forwards; }
+      .main-section .main--header .close-open--btns .line--3__burger {
+        animation-name: lineBurger-3;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+
+@keyframes lineBurger-1 {
+  0% {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); }
+  50% {
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg); }
+  100% {
+    top: 5%;
+    transform: translateY(0%) rotate(0deg); } }
+
+@keyframes lineBurger-2 {
+  0% {
+    display: none; }
+  50% {
+    display: block;
+    visibility: hidden; }
+  100% {
+    display: block;
+    visibility: visible; } }
+
+@keyframes lineBurger-3 {
+  0% {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg); }
+  50% {
+    bottom: 50%;
+    transform: translateY(50%) rotate(0deg); }
+  100% {
+    bottom: 5%;
+    transform: translateY(50%) rotate(0deg); } }
+  .main-section .main--hgroup {
+    text-align: center;
+    padding: 100px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-image: url(./assets/about/mobile/image-hero-whitecup.jpg);
+    background-size: cover;
+    background-position: right;
+    color: #FEFCF7; }
+    .main-section .main--hgroup h1 {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 27px; }
+      .main-section .main--hgroup h1 span {
+        display: block; }
+    .main-section .main--hgroup p {
+      font-size: 15px;
+      line-height: 25px;
+      color: rgba(254, 252, 247, 0.6);
+      margin-bottom: 40px; }
+
+.section--our-commitment {
+  padding: 0px 25px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 120px; }
+  .section--our-commitment .our-commitment--img {
+    width: 100%;
+    height: 400px;
+    background-image: url(./assets/about/mobile/image-commitment.jpg);
+    background-size: cover;
+    border-radius: 10px; }
+  .section--our-commitment h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    color: #333D4B; }
+  .section--our-commitment p {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+    color: #333D4B; }

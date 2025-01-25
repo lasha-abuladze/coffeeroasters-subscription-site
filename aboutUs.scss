@@ -1,0 +1,496 @@
+
+* {
+    transition: all 0.2s;
+}
+
+$frances--font: "Fraunces", serif;
+
+body {
+    background-color: #F2F2F2;
+    font-family: $frances--font;
+    padding-bottom: 70px;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.main-section {
+
+    padding: 0px 25px;
+    box-sizing: border-box;
+
+    .main--header {
+        @include flex-row();
+        padding: 32px 0px;
+        box-sizing: border-box;
+
+        .logo-div {
+            @include flex-row();
+            gap: 5px;
+            // font-family: $frances--font;
+            font-size: 20px;
+            font-weight: 700;
+            color: #333D4B;
+        }
+
+        .main--navigation {
+            position: absolute;
+            width: 100%;
+            height: calc(100vh - 90px) !important;
+            height: 90px;
+            top: 89px;
+            left: 0;
+            text-align: center;
+            padding-top: 50px;
+            box-sizing: border-box;
+            font-size: 24px;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            
+            background: linear-gradient( #F2F2F2, 
+            rgba(242, 242, 242, 1), 
+            rgba(242, 242, 242, 0.9),
+            rgba(242, 242, 242, 0.7),
+            rgba(242, 242, 242, 0.5));
+
+            display: none;
+
+
+            .navigation--open {
+                animation-name: navigation-open;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes navigation-open {
+                0%{
+                    display: block !important;
+                    background: linear-gradient( #F2F2F2, 
+                    rgba(242, 242, 242, 0), 
+                    rgba(242, 242, 242, 0), 
+                    rgba(242, 242, 242, 0), 
+                    rgba(242, 242, 242, 0));
+                    
+                } 100% {
+                    display: block !important;
+                    background: linear-gradient( #F2F2F2, 
+                    rgba(242, 242, 242, 0.5), 
+                    rgba(242, 242, 242, 0.3), 
+                    rgba(242, 242, 242, 0.1), 
+                    rgba(242, 242, 242, 0));
+                }
+            }
+
+
+
+            ul {
+                @include flex-column();
+                align-items: start;
+                gap: 45px;
+                position: relative;
+
+                background-color: gray;
+
+                li {                
+                    width: fit-content;
+                    position: absolute;
+
+                    a {
+                        color: #333D4B;
+                    }
+    
+                }
+
+                .li--home {
+                    top: 0;
+                    left: 0;
+                    transform: translateX(-100%);
+
+                }
+
+                .li--about {
+                    top: 60px;
+                    right: 0;
+                    transform: translateX(100%);
+                }
+
+                .li--create {
+                    top: 120px;
+                    left: 0;
+                    transform: translateX(-100%);
+                }
+
+                
+                .li-home--open {
+                    animation-name: liHome-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .li-about--open {
+                    animation-name: liAbout-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .li-create--open {
+                    animation-name: liCreatet-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+
+
+                @keyframes liHome-open {
+                    0%{
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+
+                    100% {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                @keyframes liAbout-open {
+                    0% {
+                        right: 0;
+                        transform: translateX(100%);
+                    } 100% {
+                        right: 50%;
+                        transform: translateX(50%);
+                    }
+                }
+
+                @keyframes liCreatet-open {
+                    0%{
+                        left: 0;
+                        transform: translateX(-100%);
+                    } 100% {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+
+
+                .li-home--close {
+                    animation-name: liHome-close;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+                
+                .li-about--close {
+                    animation-name: liAbout-close;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+                .li-create--close {
+                    animation-name: liCreate-close;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+
+
+                @keyframes liHome-close {
+                    0%{
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    100% {
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+                }
+
+                @keyframes liAbout-close {
+                    0% {
+                        right: 50%;
+                        transform: translateX(50%);
+                    } 100% {
+                        right: 0;
+                        transform: translateX(100%);
+                    }
+                }
+
+                @keyframes liCreate-close {
+                    0%{
+                        left: 50%;
+                        transform: translateX(-50%);
+                    } 100% {
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+                }
+
+            }
+
+
+        }
+
+        .close-open--btns {
+            width: 20px;
+            height: 20px;
+            box-sizing: border-box;
+            position: relative;
+            cursor: pointer;
+
+            .menu-lines {
+                width: 100%;
+                height: 3px;
+                border-radius: 15px;
+                background-color: rgb(0, 0, 0);
+                position: absolute;
+            }
+
+            .line--1 {
+                top: 5%;
+            }
+
+            .line--2 {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .line--3 {
+                bottom: 5%;
+            }
+
+
+            
+            
+            // transfrom burger sign into X
+
+            .line--1__close {
+                animation-name: lineClose-1;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            .line--2__close {
+                animation-name: lineClose-2;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            .line--3__close {
+                animation-name: lineClose-3;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+
+
+            @keyframes lineClose-1 {
+                0% {
+                    top: 5%;
+                }
+
+                50% {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                100% {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+
+            @keyframes lineClose-2 {
+                0%{
+                    display: block;
+                }
+
+                50% {
+                    display: none;
+                }
+
+                100% {
+                    display: none;
+                }
+            }
+
+            @keyframes lineClose-3 {
+                0%{
+                    bottom: 5%;
+                }
+
+                50% {
+                    bottom: 50%;
+                    transform: translateY(50%);
+                }
+
+                100% {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(-45deg);
+                }
+            }
+
+
+
+            
+
+            // transfrom X sign into burger
+
+            .line--1__burger {
+                animation-name: lineBurger-1;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            .line--2__burger {
+                animation-name: lineBurger-2;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            .line--3__burger {
+                animation-name: lineBurger-3;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+
+            @keyframes lineBurger-1 {
+                0% {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                50% {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(0deg);
+                }
+
+                100% {
+                    top: 5%;
+                    transform: translateY(0%) rotate(0deg);
+                }
+            }
+            
+            @keyframes lineBurger-2 {
+                0%{
+                    display: none;
+                }
+
+                50% {
+                    display: block;
+                    visibility: hidden;
+                }
+
+                100% {
+                    display: block;
+                    visibility: visible;
+                }
+            }
+
+            @keyframes lineBurger-3 {
+                0%{
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(-45deg);
+                }
+
+                50% {
+                    bottom: 50%;
+                    transform: translateY(50%) rotate(0deg);
+                }
+
+                100% {
+                    bottom: 5%;
+                    transform: translateY(50%) rotate(0deg);
+                }
+            }
+
+
+
+
+
+
+        }
+    }
+
+    .main--hgroup {
+        text-align: center;
+        padding: 100px 25px;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        background-image: url(./assets/about/mobile/image-hero-whitecup.jpg);
+        background-size: cover;
+        background-position: right;
+        color: #FEFCF7;
+
+
+        h1 {
+           font-size: 40px;
+           font-weight: 700;
+           margin-bottom: 27px;
+                          
+           span {
+            display: block;
+           }
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 25px;
+            color: rgba(254, 252, 247, 0.6);
+            margin-bottom: 40px;
+        }
+ 
+
+    }
+
+
+}
+
+
+.section--our-commitment {
+    padding: 0px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 120px;
+
+    .our-commitment--img {
+        width: 100%; 
+        height: 400px;
+        background-image: url(./assets/about/mobile/image-commitment.jpg);
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 45px;
+        margin-bottom: 30px;
+        color: #333D4B;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        font-weight: 400;
+        color: #333D4B;
+    }
+
+
+}
