@@ -494,3 +494,49 @@ body {
 
 
 }
+
+.section--quality {
+    padding: 0px 25px 50px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    color: #FEFCF7;
+    width: calc(100% - 50px);
+    margin: auto;
+    margin-top: 130px;
+
+    .background-img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100%- 50px);
+        height: 100%;
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+    .section-quality--img {
+        width: 280px;
+        height: 155px;
+        background-image: url(./assets/about/mobile/image-quality.jpg);
+        background-size: cover;
+        border-radius: 10px;
+        margin: auto;
+        transform: translateY(-50%);
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 25px;
+        color: rgba(254, 252, 247, 0.6);
+    }
+
+}
+
