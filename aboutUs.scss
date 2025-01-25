@@ -540,3 +540,47 @@ body {
 
 }
 
+
+.section--our-headquarters {
+    padding: 0px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 120px;
+    color: #333D4B;
+
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #83888F;
+        margin-bottom: 70px;
+    }
+
+    .headquarters-div {
+
+        @include flex-column();
+        gap: 100px;
+
+        img {
+            margin-bottom: 25px;
+        }
+
+        strong {
+            font-size: 28px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        span {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 15px;
+            font-weight: 400;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
