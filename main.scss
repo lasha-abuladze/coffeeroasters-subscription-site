@@ -925,75 +925,10 @@ footer {
         box-sizing: border-box;
         max-width: 1280px;
         margin: auto;
-    
-        // .main--header {
-   
-        //     .main--navigation {
-        //         position: static;
-        //         background: none;
-        //         height: 100% !important;
-        //         padding: 0 !important; 
-        //         font-size: 12px;    
-        //         display: block;
-    
-    
-        //         .navigation--open {
-        //             animation-name: navigation-open;
-        //             animation-duration: 1s;
-        //             animation-fill-mode: forwards;
-        //         }
-    
-        //         @keyframes navigation-open {
-        //             0%{
-        //                 display: block !important;
-        //                 background: linear-gradient( #F2F2F2, 
-        //                 rgba(242, 242, 242, 0), 
-        //                 rgba(242, 242, 242, 0), 
-        //                 rgba(242, 242, 242, 0), 
-        //                 rgba(242, 242, 242, 0));
-                        
-        //             } 100% {
-        //                 display: block !important;
-        //                 background: linear-gradient( #F2F2F2, 
-        //                 rgba(242, 242, 242, 0.5), 
-        //                 rgba(242, 242, 242, 0.3), 
-        //                 rgba(242, 242, 242, 0.1), 
-        //                 rgba(242, 242, 242, 0));
-        //             }
-        //         }
-    
-    
-    
-        //         ul {
-        //             @include flex-row();
-        //             justify-content: right;
-        //             align-items: start;
-        //             position: static;
-        //             background: none;
-    
-        //             li {                
-        //                 position: static;
-        //                 transform: translate(0) !important;
-    
-        //                 // a {
-        //                 //     color: #333D4B;
-        //                 // }
-        
-        //             }
-    
-        //         }
-    
-    
-        //     }
-    
-        //     .close-open--btns {
-        //         display: none;        
-        //     }
-        // }
-    
+
         .main--hgroup {
             // text-align: left;
-            // padding: 100px 25px;   
+            padding: 50px 100px;   
             background-image: url(./assets/home/desktop/image-hero-coffeepress.jpg);
 
             // p {
