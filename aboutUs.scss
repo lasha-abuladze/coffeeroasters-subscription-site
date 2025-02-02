@@ -838,6 +838,120 @@ footer {
         }
 
 
+
+
+    }
+
+    .section--quality {
+        max-width: 1280px;
+        height: 500px;
+        margin: auto;
+        margin-top: 350px;
+        display: flex;
+        align-items: center;
+        padding: 85px;
+        // background-color: antiquewhite;
+
+        .section-quality--img {
+            width: 445px;
+            height: 480px;
+            background-image: url(./assets/about/desktop//image-quality.jpg);
+            order: 2;
+
+            position: absolute;
+            transform: translateY(-20%);
+            right: 10%;
+        }
+
+        .background-img {
+            left: 50%;
+            width: calc(100% - 80px);
+            // width: 100%;
+            height: 100%;
+        }
+
+        hgroup {
+            text-align: left;
+            max-width: 540px;
+        }
+    }
+    
+
+    .section--our-headquarters {
+        max-width: 1280px;
+        margin: auto;
+        padding: 0px 40px;
+        margin-top: 200px;
+        margin-bottom: 200px;
+
+        .headquarters-div {
+            gap: 250px !important;
+        }
+    }
+
+
+    footer {
+        max-width: 1240px;
+        margin: auto;
+        padding: 50px 100px;
+
+        // background-color: #2C343E;
+        // border-radius: 10px;
+        // margin: auto;
+        // text-align: center;
+        // padding: 50px 0px;
+        // box-sizing: border-box;
+
+
+        display: flex;
+        justify-content: space-between;
+    
+        .logo-div {
+            // @include flex-row();
+            // justify-content: center;
+            // gap: 7px;
+            // font-size: 20px;
+            // font-weight: 700;
+            // color: #FEFCF7;
+
+
+            margin: 0;
+        }
+
+        .xxxx {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+        }
+    
+        ul{
+
+            margin: 0;
+            li {
+    
+                margin: 0;
+    
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+    
+                a {
+                    color: #83888F;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        .social-medias {
+            margin-top: 50px;
+            @include flex-row();
+            justify-content: center;
+            gap: 15px;
+
+            margin: 0;
+        }
     }
 
 }
