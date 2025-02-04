@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass ./aboutUs.scss ./aboutUs.css -w"
+    "compile:sass": "node-sass ./createYourPlan.scss ./createYourPlan.css -w"
   },
   "author": "",
   "license": "ISC",
