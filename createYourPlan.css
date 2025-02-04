@@ -272,3 +272,34 @@ body {
       font-weight: 400;
       color: rgba(254, 252, 247, 0.8);
       line-height: 25px; }
+
+.section-steps {
+  margin-top: 100px;
+  padding: 0px 0px;
+  box-sizing: border-box; }
+  .section-steps .steps {
+    padding: 85px 25px;
+    box-sizing: border-box;
+    background-color: #2C343E;
+    border-radius: 10px; }
+    .section-steps .steps hgroup {
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 65px; }
+      .section-steps .steps hgroup:last-child {
+        margin: 0; }
+      .section-steps .steps hgroup strong {
+        font-size: 72px;
+        font-weight: 700;
+        color: #FDD6BA;
+        display: block;
+        margin-bottom: 30px; }
+      .section-steps .steps hgroup h3 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px; }
+      .section-steps .steps hgroup p {
+        font-size: 15px;
+        font-weight: 400;
+        color: rgba(254, 252, 247, 0.8);
+        line-height: 25px; }

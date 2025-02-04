@@ -454,3 +454,53 @@ body {
     
 }
 
+
+.section-steps {
+
+    margin-top: 100px;
+    padding: 0px 0px;
+    // border-radius: 10px;
+    box-sizing: border-box;
+
+    .steps {
+        
+        padding: 85px 25px;
+        box-sizing: border-box;
+        background-color:  #2C343E;
+        border-radius: 10px;
+
+        hgroup {
+
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 65px;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            strong {
+                font-size: 72px;
+                font-weight: 700;
+                color: #FDD6BA;
+                display: block;
+                margin-bottom: 30px;
+            }
+
+            h3 {
+              font-size: 28px;
+              font-weight: 700;
+              margin-bottom: 30px; 
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                color: rgba(254, 252, 247, 0.8);
+                line-height: 25px;
+            }
+        }
+    }
+
+
+}
