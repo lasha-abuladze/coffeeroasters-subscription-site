@@ -5,7 +5,6 @@
 
 const answers = document.querySelectorAll(`.ul--answers`);
 
-let count = 0;
 
 
 
@@ -18,13 +17,14 @@ document.addEventListener(`click`, (e) => {
         const radioInputs = perent.querySelectorAll(`.radio-inp`);
         const liArr = perent.querySelectorAll(`.li--answer`);
 
+        const xx = Number(perent.classList[1][(perent.classList[1].length -1)]);
+
+        answers[xx]?.classList?.remove(`display-none`);
+
 
         radioInputs.forEach((el, i) => {
             if(el.checked) {
-
-                count ++
-                console.log(count)
-
+                
                 liArr.forEach(el => {
                     if(el.classList.contains(`checked`)) {
                         el.classList.remove(`checked`)
@@ -36,18 +36,6 @@ document.addEventListener(`click`, (e) => {
                 liArr[i].classList.add(`checked`)
             }
         })
-
-
-
-
-
-                // // count ++;
-
-        // console.log(answers[count])
-
-        // // answers.forEach((el, i) => {
-        // //     el[count].classList.remove(`display-none`)
-        // // })
 
     } 
 
