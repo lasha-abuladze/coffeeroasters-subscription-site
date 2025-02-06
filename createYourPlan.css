@@ -1,10 +1,15 @@
-* {
-  transition: all 0.2s; }
-
 body {
   background-color: #F2F2F2;
   font-family: "Fraunces", serif;
   padding-bottom: 70px; }
+
+.checked {
+  background-color: #0E8784 !important;
+  color: #FFFFFF !important;
+  transition: all 0.2s !important; }
+
+.display-none {
+  display: none !important; }
 
 .main-section {
   padding: 0px 25px;
@@ -302,4 +307,38 @@ body {
         font-size: 15px;
         font-weight: 400;
         color: rgba(254, 252, 247, 0.8);
+        line-height: 25px; }
+
+.section-quize {
+  margin-top: 100px;
+  padding: 0px 25px; }
+  .section-quize .li--question {
+    margin-bottom: 110px; }
+    .section-quize .li--question h4 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #333D4B;
+      margin-bottom: 30px; }
+      .section-quize .li--question h4 span {
+        display: block; }
+    .section-quize .li--question .ul--answers .li--answer {
+      background-color: #F4F1EB;
+      color: #333D4B;
+      padding: 30px;
+      box-sizing: border-box;
+      position: relative;
+      border-radius: 10px;
+      margin-bottom: 20px !important; }
+      .section-quize .li--question .ul--answers .li--answer:last-child {
+        margin: 0; }
+      .section-quize .li--question .ul--answers .li--answer .radio-inp {
+        position: absolute;
+        opacity: 0; }
+      .section-quize .li--question .ul--answers .li--answer .radio--label h5 {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 10px; }
+      .section-quize .li--question .ul--answers .li--answer .radio--label p {
+        font-size: 16px;
+        font-weight: 400;
         line-height: 25px; }
