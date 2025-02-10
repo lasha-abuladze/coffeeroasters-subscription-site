@@ -402,3 +402,87 @@ footer {
     justify-content: space-between;
     justify-content: center;
     gap: 15px; }
+
+@media (min-width: 760px) {
+  .main-section {
+    padding: 0px 40px;
+    box-sizing: border-box; }
+    .main-section .main--header .main--navigation {
+      position: static;
+      background: none;
+      height: 100% !important;
+      padding: 0 !important;
+      font-size: 12px;
+      display: block; }
+      .main-section .main--header .main--navigation .navigation--open {
+        animation-name: navigation-open;
+        animation-duration: 1s;
+        animation-fill-mode: forwards; }
+  @keyframes navigation-open {
+    0% {
+      display: block !important;
+      background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0), rgba(242, 242, 242, 0)); }
+    100% {
+      display: block !important;
+      background: linear-gradient(#F2F2F2, rgba(242, 242, 242, 0.5), rgba(242, 242, 242, 0.3), rgba(242, 242, 242, 0.1), rgba(242, 242, 242, 0)); } }
+      .main-section .main--header .main--navigation ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: right;
+        align-items: start;
+        position: static;
+        background: none; }
+        .main-section .main--header .main--navigation ul li {
+          position: static;
+          transform: translate(0) !important; }
+    .main-section .main--header .close-open--btns {
+      display: none; }
+    .main-section .main--hgroup {
+      text-align: left;
+      padding: 100px 25px;
+      background-image: url(./assets/home/tablet//image-hero-coffeepress.jpg); }
+      .main-section .main--hgroup p {
+        width: 420px; }
+  .section-steps .steps {
+    padding: 85px 40px; }
+    .section-steps .steps .circles {
+      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 204px;
+      margin-bottom: 45px;
+      position: relative; }
+      .section-steps .steps .circles .circle {
+        width: 31px;
+        height: 31px;
+        border: 2px solid #0E8784;
+        border-radius: 50%;
+        box-sizing: border-box; }
+      .section-steps .steps .circles .background-line {
+        width: calc(100% - 31px);
+        height: 2px;
+        background-color: #FDD6BA;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); }
+    .section-steps .steps .hgroup--div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      justify-content: start;
+      gap: 30px;
+      align-items: center; }
+      .section-steps .steps .hgroup--div hgroup {
+        margin: 0;
+        max-width: 350px;
+        text-align: left;
+        padding: 0px 10px;
+        min-height: 390px; }
+        .section-steps .steps .hgroup--div hgroup h3 span {
+          display: block;
+          margin-top: 10px; } }

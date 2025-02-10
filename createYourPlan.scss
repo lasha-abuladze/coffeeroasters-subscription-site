@@ -661,3 +661,148 @@ footer {
     }
 }
 
+
+
+
+@media (min-width:760px) {
+
+    .main-section {
+
+        padding: 0px 40px;
+        box-sizing: border-box;
+    
+        .main--header {
+   
+            .main--navigation {
+                position: static;
+                background: none;
+                height: 100% !important;
+                padding: 0 !important; 
+                font-size: 12px;    
+                display: block;
+    
+    
+                .navigation--open {
+                    animation-name: navigation-open;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+    
+                @keyframes navigation-open {
+                    0%{
+                        display: block !important;
+                        background: linear-gradient( #F2F2F2, 
+                        rgba(242, 242, 242, 0), 
+                        rgba(242, 242, 242, 0), 
+                        rgba(242, 242, 242, 0), 
+                        rgba(242, 242, 242, 0));
+                        
+                    } 100% {
+                        display: block !important;
+                        background: linear-gradient( #F2F2F2, 
+                        rgba(242, 242, 242, 0.5), 
+                        rgba(242, 242, 242, 0.3), 
+                        rgba(242, 242, 242, 0.1), 
+                        rgba(242, 242, 242, 0));
+                    }
+                }
+    
+    
+    
+                ul {
+                    @include flex-row();
+                    justify-content: right;
+                    align-items: start;
+                    position: static;
+                    background: none;
+    
+                    li {                
+                        position: static;
+                        transform: translate(0) !important;        
+                    }
+    
+                }
+    
+    
+            }
+    
+            .close-open--btns {
+                display: none;        
+            }
+        }
+    
+        .main--hgroup {
+            text-align: left;
+            padding: 100px 25px;   
+            background-image: url(./assets/home/tablet//image-hero-coffeepress.jpg);
+
+            p {
+                width: 420px;
+            }    
+        }    
+    
+    }
+
+    .section-steps {
+
+        .steps {
+
+            padding: 85px 40px;
+
+
+            .circles {
+                width: fit-content;
+                @include flex-row();
+                gap: 204px;
+                margin-bottom: 45px;
+
+                position: relative;
+
+                .circle {
+                    width: 31px;
+                    height: 31px;
+                    border: 2px solid #0E8784;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                }
+
+                .background-line {
+                    width: calc(100% - 31px);
+                    height: 2px;
+                    background-color: #FDD6BA;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+
+            .hgroup--div {
+                @include flex-row();
+                justify-content: start;
+                gap: 30px;
+                align-items: center;
+
+                hgroup {
+                    margin: 0;
+                    max-width: 350px;
+                    text-align: left;
+                    padding: 0px 10px;
+                    min-height: 390px;
+
+                     h3 {
+                        span {
+                            display: block;
+                            margin-top: 10px;
+                        }
+                     }
+                }
+            }
+        }
+
+    }
+
+    
+
+     
+}
