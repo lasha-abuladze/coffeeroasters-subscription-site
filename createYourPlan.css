@@ -317,14 +317,14 @@ body {
     .section-quize .li--question h4 {
       font-size: 24px;
       font-weight: 700;
-      color: #333D4B;
+      color: #83888F;
       margin-bottom: 30px; }
       .section-quize .li--question h4 span {
         display: block; }
     .section-quize .li--question .ul--answers .li--answer {
       background-color: #F4F1EB;
       color: #333D4B;
-      padding: 30px;
+      padding: 0px;
       box-sizing: border-box;
       position: relative;
       border-radius: 10px;
@@ -334,14 +334,20 @@ body {
       .section-quize .li--question .ul--answers .li--answer .radio-inp {
         position: absolute;
         opacity: 0; }
-      .section-quize .li--question .ul--answers .li--answer .radio--label h5 {
-        font-size: 25px;
-        font-weight: 700;
-        margin-bottom: 10px; }
-      .section-quize .li--question .ul--answers .li--answer .radio--label p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 25px; }
+      .section-quize .li--question .ul--answers .li--answer .radio--label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        box-sizing: border-box; }
+        .section-quize .li--question .ul--answers .li--answer .radio--label h5 {
+          font-size: 25px;
+          font-weight: 700;
+          margin-bottom: 10px; }
+        .section-quize .li--question .ul--answers .li--answer .radio--label p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 25px; }
 
 .section-summary {
   padding: 0px 25px;
@@ -485,4 +491,60 @@ footer {
         min-height: 390px; }
         .section-steps .steps .hgroup--div hgroup h3 span {
           display: block;
-          margin-top: 10px; } }
+          margin-top: 10px; }
+  .section-quize {
+    padding: 0px 40px; }
+    .section-quize .li--question {
+      margin-bottom: 110px; }
+      .section-quize .li--question h4 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 30px; }
+        .section-quize .li--question h4 span {
+          display: inline; }
+      .section-quize .li--question .ul--answers {
+        display: flex;
+        gap: 25px; }
+        .section-quize .li--question .ul--answers .li--answer {
+          background-color: #F4F1EB;
+          color: #333D4B;
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
+          border-radius: 10px;
+          margin-bottom: 0px !important; }
+          .section-quize .li--question .ul--answers .li--answer:last-child {
+            margin: 0; }
+          .section-quize .li--question .ul--answers .li--answer .radio-inp {
+            position: absolute;
+            opacity: 0; }
+          .section-quize .li--question .ul--answers .li--answer .radio--label {
+            padding: 35px 25px 90px 25px; }
+            .section-quize .li--question .ul--answers .li--answer .radio--label h5 {
+              font-size: 25px;
+              font-weight: 700;
+              margin-bottom: 10px; }
+            .section-quize .li--question .ul--answers .li--answer .radio--label p {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 25px; }
+  .section-summary {
+    padding: 0px 40px; }
+    .section-summary hgroup {
+      padding: 35px 45px 30px 45px; }
+      .section-summary hgroup h6 {
+        margin-bottom: 25px; }
+      .section-summary hgroup p {
+        line-height: 40px;
+        text-align: left; }
+  footer {
+    width: calc(100% - 80px);
+    padding: 50px 0px; }
+    footer ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 80px; }
+      footer ul li {
+        margin: 0; } }
