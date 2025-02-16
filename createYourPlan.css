@@ -311,7 +311,22 @@ body {
 
 .section-quize {
   margin-top: 100px;
-  padding: 0px 25px; }
+  padding: 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px; }
+  .section-quize .aside {
+    width: 70%;
+    display: none; }
+    .section-quize .aside .aside-list li {
+      margin-bottom: 50px; }
+    .section-quize .aside ul span {
+      font-size: 28px;
+      font-weight: 700;
+      display: inline-block;
+      color: #969ba3; }
+      .section-quize .aside ul span:first-child {
+        margin-right: 10px; }
   .section-quize .li--question {
     margin-bottom: 110px; }
     .section-quize .li--question h4 {
@@ -323,6 +338,7 @@ body {
         display: block; }
     .section-quize .li--question .ul--answers .li--answer {
       background-color: #F4F1EB;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
       color: #333D4B;
       padding: 0px;
       box-sizing: border-box;
@@ -529,7 +545,7 @@ footer {
               font-weight: 400;
               line-height: 25px; }
   .section-summary {
-    padding: 0px 40px; }
+    padding: 0px 0px; }
     .section-summary hgroup {
       padding: 35px 45px 30px 45px; }
       .section-summary hgroup h6 {
@@ -548,3 +564,75 @@ footer {
       margin-bottom: 80px; }
       footer ul li {
         margin: 0; } }
+
+@media (min-width: 1100px) {
+  .main-section {
+    padding: 0px 40px;
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: auto; }
+  .section-steps {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: auto;
+    margin-top: 150px;
+    box-sizing: border-box; }
+    .section-steps .steps {
+      padding: 85px 70px;
+      max-width: 1280px;
+      margin: auto; }
+      .section-steps .steps .circles {
+        margin-bottom: 100px; }
+      .section-steps .steps .hgroup--div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        justify-content: start;
+        gap: 100px;
+        align-items: center; }
+  .section-quize {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: auto;
+    margin-top: 150px;
+    box-sizing: border-box; }
+    .section-quize .aside {
+      display: block !important; }
+  .section-summary {
+    width: 100%; }
+    .section-summary hgroup {
+      padding: 30px 30px 40px 30px;
+      box-sizing: border-box; }
+  footer {
+    max-width: 1280px;
+    margin: auto;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between; }
+    footer .logo-div {
+      margin: 0; }
+    footer .xxxx {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 100px; }
+    footer ul {
+      margin: 0; }
+      footer ul li {
+        margin: 0; }
+        footer ul li:last-child {
+          margin-bottom: 0px; }
+        footer ul li a {
+          color: #83888F;
+          font-size: 12px;
+          font-weight: bold; }
+    footer .social-medias {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      justify-content: center;
+      gap: 15px;
+      margin: 0; } }
